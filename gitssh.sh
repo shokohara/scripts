@@ -1,2 +1,2 @@
 #!/bin/sh
-ssh -F ~/.ssh/config.d/config.git "$@"
+ssh -F ~/.ssh/config.d/codecommit "$@"
