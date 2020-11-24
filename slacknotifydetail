@@ -1,0 +1,2 @@
+rec=`(time "$@") 2>&1`
+curl -X POST -H 'Content-type: application/json' --data '{"text":"'`hostname`' '`pwd`" > $rec"'"}' https://hooks.slack.com/services/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
