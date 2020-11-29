@@ -1,7 +1,8 @@
+exitCode=$?
 rec=""
 if [ $# == 0 ]; then
   rec=""
 else
   rec=`(time "$@") 2>&1`
 fi
-curl -X POST -H 'Content-type: application/json' --data '{"text":"'`hostname`' '`pwd`" > $rec"'"}' https://hooks.slack.com/services/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
+curl -X POST -H 'Content-type: application/json' --data '{"text":"'`hostname`' '`pwd`" exitCode: $exitCode > $rec"'"}' $SLACK_NOTIFICATION_URL
